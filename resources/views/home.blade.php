@@ -3,10 +3,9 @@
 
 @section('content')
 <div class="container my-5">
-    <h1>Titolo Pagina</h1>
-    <p>
-        Paragrafo
-    </p>
+    <h1>Lista completa dei film</h1>
+    
+    @dump($movies)
 </div>
 
 @endsection
