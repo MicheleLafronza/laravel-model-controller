@@ -22,3 +22,5 @@ Route::get('/chi-siamo', [PageController::class, 'about'])->name('about');
 Route::get('/contatti', [PageController::class, 'contacts'])->name('contacts');
 
 Route::get('/per-voti', [PageController::class, 'byvote'])->name('byvote');
+
+Route::get('/dettaglio-film/{id}', [PageController::class, 'details'])->name('details');

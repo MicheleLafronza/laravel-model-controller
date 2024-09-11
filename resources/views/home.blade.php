@@ -15,13 +15,13 @@
             <h6 class="card-title">Lingua originale: {{ $movie->nationality }}</h6>
             <h6 class="card-title">Data di uscita: {{ $movie->date }}</h6>
             <h6 class="card-title">Voto: {{ $movie->vote }}</h6>
-            <a href="#" class="btn btn-primary">Vai ai dettagli</a>
+            <a href="{{ route('details', ['id' => $movie->id]) }}" class="btn btn-primary">Vai ai dettagli</a>
             </div>
         </div>    
         @endforeach
         
     </div>
-    
+
 </div>
 
 @endsection

@@ -29,4 +29,11 @@ class PageController extends Controller
 
         return view('byvote', compact('movies'));
     }
+
+    public function details($id){
+
+        $movie = Movie::find($id);
+
+        return view('details', compact('movie'));
+    }
 }
