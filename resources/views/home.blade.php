@@ -5,7 +5,23 @@
 <div class="container my-5">
     <h1>Lista completa dei film</h1>
     
-    @dump($movies)
+    <div class="row">
+   
+        @foreach ($movies as $movie)
+        <div class="card col-4">
+            <div class="card-body">
+            <h5 class="card-title">Titolo: {{ $movie->title }}</h5>
+            <h6 class="card-title">Titolo originale: {{ $movie->original_title }}</h6>
+            <h6 class="card-title">Lingua originale: {{ $movie->nationality }}</h6>
+            <h6 class="card-title">Data di uscita: {{ $movie->date }}</h6>
+            <h6 class="card-title">Voto: {{ $movie->vote }}</h6>
+            <a href="#" class="btn btn-primary">Vai ai dettagli</a>
+            </div>
+        </div>    
+        @endforeach
+        
+    </div>
+    
 </div>
 
 @endsection
