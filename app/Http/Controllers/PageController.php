@@ -22,4 +22,11 @@ class PageController extends Controller
     public function about(){
         return view('about');
     }
+
+    public function byvote(){
+
+        $movies = Movie::orderBy('vote', 'desc')->get();
+
+        return view('byvote', compact('movies'));
+    }
 }
